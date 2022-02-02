@@ -42,7 +42,7 @@ export const ProductCard = ({
 
   return (
     <Provider value={{ counter, product, maxCount, increaseBy }}>
-      <div className={`${styles.productCard} ${className}`} style={style}>
+      <div className={`${styles.productCard} ${className || ''}`} style={style}>
         {children({
           count: counter,
           isMaxCountReached,
