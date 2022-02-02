@@ -1,10 +1,18 @@
-# ksg-product-card
+# KSG-PRODUCT-CARD
 
-Este es un paquete de pruebas de despliegue en NPM
+This is a NPM deployment test package.
 
 ### Kevin Salazar
 
-## Ejemplo:
+## Installing
+
+Using npm:
+
+```
+$ npm install ksg-product-card
+```
+
+## Example:
 
 ```
 import ProductCard, {ProductImage, ProductTitle, ProductButtons,} from 'ksg-product-card'
@@ -17,8 +25,7 @@ import ProductCard, {ProductImage, ProductTitle, ProductButtons,} from 'ksg-prod
 	initialValues={{
 		count: 4,
 		// maxCount: 10,
-	}}
->
+	}}>
 	{({ count, maxCount, isMaxCountReached, increaseBy, reset }) => (
 		<>
 			<ProductImage />
