@@ -9,7 +9,16 @@ export interface Props {
   title?: string;
 }
 
-export const ProductTitle = ({ title, className, style }: Props) => {
+/**
+ *
+ * @param {string} className - A string optional params
+ * @param {CSSProperties} style - A object optional params
+ * @param {string} title - A string optional params
+ * @param {object} initialValues - A object requiered params
+ * @param {object} product - A object requiered params
+ * @returns {JSX.Element} - JSX.Element
+ */
+export const ProductTitle = ({ title, className, style }: Props): JSX.Element => {
   const { product } = useContext(ProductContext);
 
   return (

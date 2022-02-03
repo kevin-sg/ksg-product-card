@@ -1,5 +1,5 @@
 {
-  "version": "0.0.3-beta",
+  "version": "0.0.4-beta",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -53,28 +53,28 @@
     }
   ],
   "devDependencies": {
-    "@types/enzyme": "^3.10.11",
-    "@types/react-test-renderer": "^17.0.1",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@rollup/plugin-image": "^2.1.1",
-    "@size-limit/preset-small-lib": "^7.0.5",
-    "@types/react": "^17.0.38",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/enzyme": "^3.10.11",
+    "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "@types/react-test-renderer": "^17.0.1",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
     "babel-jest": "^27.4.6",
     "enzyme-to-json": "^3.6.2",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^25.5.4",
+    "jest": "^27.4.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2",
     "rollup-plugin-postcss": "^4.0.2",
-    "size-limit": "^7.0.5",
+    "size-limit": "^7.0.8",
     "tsdx": "^0.14.1",
     "tslib": "^2.3.1",
-    "typescript": "^3.9.10"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "product",

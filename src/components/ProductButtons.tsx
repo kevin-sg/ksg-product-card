@@ -8,13 +8,15 @@ export interface Props {
   style?: CSSProperties;
 }
 
-export const ProductButtons = ({ className, style }: Props) => {
-  const { counter, increaseBy, maxCount } = useContext(ProductContext);
+/**
+ * @param {string} className - A string optional params
+ * @param {CSSProperties} style - A object optional params
+ * @returns {JSX.Element} - JSX.Element
+ */
+export const ProductButtons = ({ className, style }: Props): JSX.Element => {
+  const { counter, maxCount, increaseBy } = useContext(ProductContext);
 
-  const isMaxReached = useCallback(
-    (): boolean => !!maxCount && counter === maxCount,
-    [counter, maxCount]
-  );
+  const isMaxReached = useCallback((): boolean => !!maxCount && counter === maxCount, [counter, maxCount]);
 
   return (
     <div className={`${styles.buttonsContainer} ${className}`} style={style}>
@@ -25,9 +27,7 @@ export const ProductButtons = ({ className, style }: Props) => {
       <div className={styles.countLabel}>{counter}</div>
 
       <button
-        className={`${styles.buttonAdd} ${
-          isMaxReached() ? styles.disabled : ''
-        } `}
+        className={`${styles.buttonAdd} ${isMaxReached() ? styles.disabled : ''} `}
         onClick={() => increaseBy(+1)}
       >
         +

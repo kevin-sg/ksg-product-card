@@ -17,7 +17,7 @@ export interface ProductContextProps {
 }
 
 export interface ProductCardHOCProps {
-  ({ children, product }: ProductCardProps): JSX.Element;
+  (Props: ProductCardProps): JSX.Element;
   Buttons: (Props: ProductButtonsProps) => JSX.Element;
   Image: (Props: ProductImageProps) => JSX.Element;
   Title: (Props: ProductTitleProps) => JSX.Element;
@@ -33,8 +33,8 @@ export interface ProductInCart extends Product {
 }
 
 export interface InitialValues {
-  count?: number;
-  maxCount?: number;
+  count: number;
+  maxCount: number;
 }
 
 export interface ProductCartHandlers {

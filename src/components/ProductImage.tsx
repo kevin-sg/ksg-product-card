@@ -11,7 +11,15 @@ export interface Props {
   style?: CSSProperties;
 }
 
-export const ProductImage = ({ img, className, style }: Props) => {
+/**
+ *
+ * @param {string} title - A string optional params
+ * @param {string} img - A string optional params
+ * @param {string} className - A string optional params
+ * @param {CSSProperties} style - A object optional params
+ * @returns {JSX.Element} - JSX.Element
+ */
+export const ProductImage = ({ img, className, style }: Props): JSX.Element => {
   const { product } = useContext(ProductContext);
 
   return (

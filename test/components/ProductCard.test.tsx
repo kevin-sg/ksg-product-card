@@ -2,21 +2,23 @@ import React from 'react';
 import '../setupTest';
 import { mount } from 'enzyme';
 
-import ProductCard from '../../src/components';
+import { ProductCard } from '../../src/components';
 import { product1 } from '../data/products';
 import { act } from 'react-dom/test-utils';
 
 describe('ProductCard', () => {
   test('Debe mostrar componente con la imagen del producto', () => {
     const wrapper = mount(
-      <ProductCard product={product1}>{() => <h1>Product Card</h1>}</ProductCard>
+      <ProductCard product={product1} initialValues={{ count: 0, maxCount: 10 }}>
+        {() => <h1>Product Card</h1>}
+      </ProductCard>
     );
     expect(wrapper).toMatchSnapshot();
   });
 
   test('Debe incrementar el contador', () => {
     const wrapper = mount(
-      <ProductCard product={product1}>
+      <ProductCard product={product1} initialValues={{ count: 0, maxCount: 10 }}>
         {({ count, increaseBy }) => (
           <>
             <h1>Product Card</h1>

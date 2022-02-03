@@ -13,7 +13,7 @@ import styles from '../styles/styles.module.css';
 
 export interface Props {
   className?: string;
-  initialValues?: InitialValues;
+  initialValues: InitialValues;
   product: Product;
   style?: CSSProperties;
   value?: number;
@@ -24,7 +24,7 @@ export interface Props {
 export const ProductContext = createContext({} as ProductContextProps);
 const { Provider } = ProductContext;
 
-export const ProductCard = ({ className, initialValues, product, style, value, children, onChange }: Props) => {
+export const ProductCard = ({ className, style, initialValues, product, value, children, onChange }: Props) => {
   const { counter, maxCount, isMaxCountReached, increaseBy, reset } = useProduct({
     initialValues,
     product,
@@ -38,7 +38,7 @@ export const ProductCard = ({ className, initialValues, product, style, value, c
         {children({
           count: counter,
           isMaxCountReached,
-          maxCount: initialValues?.maxCount,
+          maxCount: initialValues.maxCount,
           product,
           increaseBy,
           reset,
